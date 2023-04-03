@@ -1,17 +1,11 @@
+import { useState } from "react";
 import "./App.css";
-import CounterDisplay from "./CounterDisplay";
+import AppWrapper from "./AppWrapper";
 
-function App(props: {
-  state?: {
-    count: number;
-    setCount: React.Dispatch<React.SetStateAction<number>>;
-  };
-}) {
-  return (
-    <div>
-      <CounterDisplay counter={props.state!.count} />
-    </div>
-  );
+function App() {
+  const [count, setCount] = useState(0);
+
+  return <AppWrapper state={{ count, setCount }} />;
 }
 
 export default App;

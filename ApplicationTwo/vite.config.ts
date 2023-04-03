@@ -10,7 +10,7 @@ export default defineConfig({
       name: "application_two",
       filename: "remoteEntry.js",
       exposes: {
-        "./App": "./src/App",
+        "./App": "./src/AppWrapper",
       },
       shared: ["react", "react-dom"],
     }),
